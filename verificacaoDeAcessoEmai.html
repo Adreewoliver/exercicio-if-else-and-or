@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Acesso de E-mail</title>
+</head>
+<body>
+    <script>
+        // Solicita o e-mail e a senha do usuário
+        let email = prompt("Digite seu e-mail:");
+        let senha = prompt("Digite sua senha:");
+
+        // Verifica se o e-mail e a senha estão corretos
+        if (email === "usuario@example.com" && senha === "senha123") {
+            alert("Acesso concedido.");
+        } else {
+            alert("Acesso negado.");
+        }
+         window.location.reload();
+    </script>
+</body>
+</html>

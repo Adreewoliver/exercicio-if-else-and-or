@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto Especial</title>
+</head>
+<body>
+    <script>
+        // Solicita o valor da compra e o código do cliente
+        let valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+        let codigoCliente = prompt("Digite o código do cliente (A para 1 ano, B para menos de 1 ano )").toUpperCase();
+
+        let desconto = 0;
+
+        // Verifica o código do cliente e aplica o desconto correspondente
+        if (codigoCliente === 'A') {
+            desconto = 0.20; // 20% de desconto
+        } else if (codigoCliente === 'B') {
+            desconto = 0.00; // 0% de desconto 
+            alert("Código de cliente inválido. Nenhum desconto será aplicado.");
+        }
+
+        // Calcula o valor final após o desconto
+        let valorFinal = valorCompra - (valorCompra * desconto);
+
+        // Exibe o valor final ao usuário
+        alert("O valor final da compra, após o desconto, é: R$ " + valorFinal.toFixed(2));
+
+        // Recarrega a página para permitir nova consulta
+        window.location.reload();
+    </script>
+</body>
+</html>

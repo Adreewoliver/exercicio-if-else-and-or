@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegibilidade para Promoção</title>
+</head>
+<body>
+    <script>
+let anosNaEmpresa = parseInt(prompt("Digite o número de anos na empresa:"));
+let notaAvaliacao = parseFloat(prompt("Digite a nota da última avaliação (0 a 10):"));
+
+        // Função para verificar se um funcionário é elegível para promoção
+function verificarElegibilidadePromocao(anosNaEmpresa, notaAvaliacao) {
+  // A promoção requer: tempo na empresa >= 2 anos OU nota de avaliação >= 8
+  if (anosNaEmpresa >= 2 || notaAvaliacao >= 8) {
+    alert("Elegível para promoção");
+    
+    return true; // Retorna true se elegível
+  } else {
+    alert("Não elegível");
+    return false; // Retorna false se não elegível
+  }
+}
+
+// Chamada da função
+verificarElegibilidadePromocao(anosNaEmpresa, notaAvaliacao);
+window.location.reload();
+
+    </script>
+</body>
+</html>

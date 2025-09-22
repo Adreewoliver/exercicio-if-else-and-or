@@ -7,23 +7,21 @@
 </head>
 <body>
     <script>
-        // Solicita o valor da casa, o salário do comprador e em quantos anos ele vai pagar
-        let valorDaCasa = parseFloat(prompt("Digite o valor da casa:"));
-        let salarioDoComprador = parseFloat(prompt("Digite o salário do comprador:"));
-        let anosParaPagar = parseInt(prompt("Em quantos anos você pretende pagar?"));
+         // Solicita a renda mensal e o score de crédito
+        let rendaMensal = parseFloat(prompt("Digite sua renda mensal:"));
+        let scoreCredito = parseInt(prompt("Digite seu score de crédito:"));
 
-        // Calcula a prestação mensal
-        let mesesParaPagar = anosParaPagar * 12;
-        let prestacaoMensal = valorDaCasa / mesesParaPagar;
-
-        // Verifica se a prestação mensal é maior que 30% do salário do comprador
-        if (prestacaoMensal > (0.3 * salarioDoComprador)) {
-            alert("Empréstimo negado.");
-            window.location.reload();
+        // Verifica se o empréstimo deve ser aprovado
+        // Condições: renda mensal > 2000 E score de crédito > 600
+        if (rendaMensal > 2000 && scoreCredito > 600) {
+            alert("Empréstimo aprovado");
         } else {
-            alert("Empréstimo aprovado.");
-            window.location.reload();
+            alert("Empréstimo negado");
         }
+        
+        // Recarrega a página para permitir nova consulta
+        window.location.reload();
+
     </script>
 </body>
 </html>

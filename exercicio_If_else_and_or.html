@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimo Bancário</title>
+</head>
+<body>
+    <script>
+        // Solicita o valor da casa, o salário do comprador e em quantos anos ele vai pagar
+        let valorDaCasa = parseFloat(prompt("Digite o valor da casa:"));
+        let salarioDoComprador = parseFloat(prompt("Digite o salário do comprador:"));
+        let anosParaPagar = parseInt(prompt("Em quantos anos você pretende pagar?"));
+
+        // Calcula a prestação mensal
+        let mesesParaPagar = anosParaPagar * 12;
+        let prestacaoMensal = valorDaCasa / mesesParaPagar;
+
+        // Verifica se a prestação mensal é maior que 30% do salário do comprador
+        if (prestacaoMensal > (0.3 * salarioDoComprador)) {
+            alert("Empréstimo negado.");
+            window.location.reload();
+        } else {
+            alert("Empréstimo aprovado.");
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letras: Vogais ou Consoantes</title>
+</head>
+<body>
+    <script>
+        //
+        let letra = prompt("Digite uma letra:").toLowerCase();
+
+        if (letra.length !== 1) {
+            alert("Por favor, digite apenas uma letra.");
+        } else if ("aeiou".includes(letra)) {
+            alert("A letra " + letra + " é uma vogal.");
+        } else {
+            alert("A letra " + letra + " é uma consoante.");
+        }
+    </script>
+</body>
+</html>

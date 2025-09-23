@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Peso</title>
+</head>
+
+<body>
+
+    <script>
+        // Solicitar ao usuário o peso e a altura
+        let peso = parseFloat(prompt("Informe o seu peso (em kg):")); // Solicita o peso ao usuário e converte para número decimal (float)
+        let altura = parseFloat(prompt("Informe a sua altura (em metros):")); // Solicita a altura ao usuário e converte para número decimal (float)
+
+        // Calcular o IMC (Índice de Massa Corporal)
+        let imc = peso / (altura * altura); // Fórmula do IMC: peso dividido pela altura ao quadrado
+
+        // Exibir o IMC e a classificação
+        alert("Seu IMC é: " + imc.toFixed(2)); // Exibe o valor do IMC arredondado para duas casas decimais
+
+        // Condição para verificar a faixa do IMC e exibir a classificação correspondente
+        if (imc < 17) {
+            alert("Muito abaixo do peso"); // Se o IMC for menor que 17, classifica como "Muito abaixo do peso"
+        } else if (imc >= 17 && imc < 18.5) {
+            alert("Abaixo do peso"); // Se o IMC for entre 17 (inclusive) e 18.5 (exclusivo), classifica como "Abaixo do peso"
+        } else if (imc >= 18.5 && imc < 25) {
+            alert("Parabéns, peso ideal"); // Se o IMC for entre 18.5 (inclusive) e 25 (exclusivo), classifica como "Peso ideal"
+        } else if (imc >= 25 && imc < 30) {
+            alert("Acima do peso"); // Se o IMC for entre 25 (inclusive) e 30 (exclusivo), classifica como "Acima do peso"
+        } else if (imc >= 30 && imc < 35) {
+            alert("Obesidade 1"); // Se o IMC for entre 30 (inclusive) e 35 (exclusivo), classifica como "Obesidade 1"
+        } else if (imc >= 35 && imc < 40) {
+            alert("Obesidade 2 (severa)"); // Se o IMC for entre 35 (inclusive) e 40 (exclusivo), classifica como "Obesidade 2 (severa)"
+        } else {
+            alert("Obesidade 3 (mórbida)"); // Se o IMC for maior ou igual a 40, classifica como "Obesidade 3 (mórbida)"
+        }
+
+    </script>
+
+</body>
+
+</html>

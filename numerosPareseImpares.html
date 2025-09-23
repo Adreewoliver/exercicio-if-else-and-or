@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares e Ímpares</title>
+</head>
+<body>
+    <script>  // Inicia a tag de script, que indica que o código a seguir é JavaScript.
+    var numero = Number(prompt("Digite um número:")); 
+    // A função prompt exibe uma caixa de entrada no navegador, pedindo ao usuário para digitar um número.
+    // O valor retornado por prompt é sempre uma string, então a função Number() converte essa string em um número.
+    // O número digitado é armazenado na variável "numero".
+
+    if (numero % 2 === 0) {  
+        // A estrutura condicional if verifica se o número armazenado em "numero" é par.
+        // O operador % calcula o resto da divisão de "numero" por 2. Se o resto for 0, significa que o número é par.
+
+        alert("O número " + numero + " é par.");  
+        // Se a condição for verdadeira (ou seja, o número for par), exibe um alerta com a mensagem
+        // "O número [numero] é par", onde [numero] será substituído pelo valor do número digitado pelo usuário.
+    } else {  
+        // Caso a condição anterior não seja verdadeira (ou seja, o número não seja par), a execução vai para o "else".
+        alert("O número " + numero + " é ímpar.");  
+        // Exibe um alerta com a mensagem "O número [numero] é ímpar", caso o número seja ímpar.
+    }
+    </script>
+</body>
+</html>
